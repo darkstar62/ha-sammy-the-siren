@@ -1,0 +1,17 @@
+{
+    "config": {
+        "title": "Sammy the Siren",
+        "step": {
+            "user": {
+                "title": "Set the hostname and port for the siren.",
+                "data": {
+                    "hostname": "Siren's local hostname",
+                    "port": "Port for the RESTful API"
+                }
+            }
+        },
+        "error": {
+            "connect_failure": "Error connecting to siren on provided host and port"
+        }
+    }
+}

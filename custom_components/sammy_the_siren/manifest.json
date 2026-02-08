@@ -1,0 +1,13 @@
+{
+    "domain": "sammy_the_siren",
+    "name": "Sammy the Siren",
+    "codeowners": ["@darkstar62"],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/darkstar62/ha-sammy-the-siren",
+    "integration_type": "device",
+    "iot_class": "local_polling",
+    "issue_tracker": "https://github.com/darkstar62/ha-sammy-the-siren/issues",
+    "requirements": ["requests>=2.7.0"],
+    "version": "2026.2.1"
+}
