@@ -6,7 +6,7 @@ from homeassistant.components.siren import (PLATFORM_SCHEMA, TURN_ON_SCHEMA, Sir
 from .const import DOMAIN
 
 
-SCAN_INTERVAL = timedelta(seconds=1)
+SCAN_INTERVAL = timedelta(seconds=5)
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
     """ Platform uses config entry setup. """
