@@ -6,9 +6,9 @@
 
 A Home Assistant integration for controlling 3D printed air-raid sirens
 using the custom [Siren](https://github.com/darkstar62/siren) firmware
-through its RESTful API.
+through its WebSockets API.
 
-This is a first release and bound to have rough edges!  Feedback and contributions are greatly
+This release is still early and bound to have rough edges!  Feedback and contributions are greatly
 appreciated. If you find this project useful, consider giving it a ⭐star to show your support!
 
 ## Installation
@@ -31,7 +31,7 @@ your Home Assistant's `/config/custom_components` directory.
 ## Configuration
 
 You nees the hostname of your siren controller.  The port is 12346 unless you've
-chamged it by hand.
+changed it by hand.
 
 To add the integration, navigate to "Settings"  > "Devices & services"  > "Add integration"  > "Sammy
 the Siren" or use the My button below. Then, follow the config flow.
@@ -41,7 +41,7 @@ the Siren" or use the My button below. Then, follow the config flow.
 Notes:
 1. If you can't find it in the integration list, make sure you've successfully installed the integration and rebooted. If so, try clearing the browser cache.
 2. If your API location is an IP address, make sure it's static or assign a static DHCP lease for it. Location changes will require you to re-add the integration.
-3. This integration omly supports http.
+3. This integration only supports http.
 
 ## Usage
 
