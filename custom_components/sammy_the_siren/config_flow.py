@@ -1,7 +1,6 @@
 """ Config flow """
 
 import logging
-import requests
 import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
@@ -10,7 +9,8 @@ from .const import (
         CONF_HOSTNAME,
         CONF_PORT
 )
-from . import SirenDevice
+from .libsiren import validate_config
+
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -41,9 +41,7 @@ class SammyConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         _LOGGER.info(f'Got {self._hostname}:{self._port}')
 
-        device = SirenDevice(self._hostname, self._port)
-        init_result = await self.hass.async_add_executor_job(device.init)
-        if not init_result:
+        if not await validate_config(self._hostname, self._port):
             _LOGGER.error(f'Attempt failed')
             return self.show_form(errors={'base': 'connect_failure'})
 
