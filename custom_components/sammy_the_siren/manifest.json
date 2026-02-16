@@ -9,5 +9,5 @@
     "iot_class": "local_push",
     "issue_tracker": "https://github.com/darkstar62/ha-sammy-the-siren/issues",
     "requirements": ["requests>=2.7.0"],
-    "version": "2026.2.2"
+    "version": "2026.2.3"
 }
